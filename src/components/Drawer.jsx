@@ -3,6 +3,8 @@ import Drawer from '@material-ui/core/Drawer';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Toolbar from '@material-ui/core/Toolbar';
 
+import AddFigures from './AddFigures';
+
 const useStyles = makeStyles({
   drawer: {
     width: 240,
@@ -23,6 +25,7 @@ const AppDrawer = (props) => {
       className={classes.drawer}
     >
       <Toolbar />
+      <AddFigures />
     </Drawer>
   );
 };
