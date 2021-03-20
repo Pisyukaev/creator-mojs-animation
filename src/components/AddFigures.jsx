@@ -16,20 +16,24 @@ const useStyles = makeStyles(() => ({
     },
   },
   expanded: {},
+
+  details: {
+    padding: 0,
+  },
 }));
 
 const AddFigures = () => {
   const classes = useStyles();
 
   return (
-    <Accordion classes={classes}>
+    <Accordion classes={{ root: classes.root, expanded: classes.expanded }}>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         Add figures
       </AccordionSummary>
-      <AccordionDetails>
+      <AccordionDetails classes={{ root: classes.details }}>
         <Button fullWidth>Rectangle</Button>
       </AccordionDetails>
-      <AccordionDetails>
+      <AccordionDetails classes={{ root: classes.details }}>
         <Button fullWidth>Circle</Button>
       </AccordionDetails>
     </Accordion>
